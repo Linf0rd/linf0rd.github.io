@@ -1,1 +1,105 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Box</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+        #chatbox {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            overflow-y: scroll;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-left: 100px;
+        }
+        #inputbox {
+            width: 396px;
+            height: 30px;
+            border: 1px solid black;
+            margin-left: 100px;
+            margin-top: -10px;
+            margin-bottom: 0px;
+        }
+        
+        #sendButton {
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .strikethrough {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<BR>
+<BR>
+<BR>
+    <div id="chatbox"></div>
+    <input type="text" id="inputbox" placeholder="Type your message...">
+    <BR>
+    <button id="sendButton">Send</button> 
+    <button id="boldButton">Bold</button>
+    <button id="italicButton">Italic</button>
+    <button id="underlineButton">Underline</button>
+    <button id="strikethroughButton">Strikethrough</button>
+    <button id="colourButton">Colour</button>
+    
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("inputbox").value;
+            document.getElementById("inputbox").value = "";
+            
+            var chatbox = document.getElementById("chatbox");
+            chatbox.innerHTML += "<p>You: <span class='bold'>" + message + "</span></p>";
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+        
+        document.getElementById("sendButton").addEventListener("click", sendMessage);
+        document.getElementById("boldButton").addEventListener("click", function() {
+            var inputbox = document.getElementById("inputbox");
+            inputbox.value = "<span class='bold'>" + inputbox.value + "</span>";
+            inputbox.focus();
+        });
+        document.getElementById("italicButton").addEventListener("click", function() {
+            var inputbox = document.getElementById("inputbox");
+            inputbox.value = "<span class='italic'>" + inputbox.value + "</span>";
+            inputbox.focus();
+        });
+        document.getElementById("underlineButton").addEventListener("click", function() {
+            var inputbox = document.getElementById("inputbox");
+            inputbox.value = "<span class='underline'>" + inputbox.value + "</span>";
+            inputbox.focus();
+        });
+        document.getElementById("strikethroughButton").addEventListener("click", function() {
+            var inputbox = document.getElementById("inputbox");
+            inputbox.value = "<span class='strikethrough'>" + inputbox.value + "</span>";
+            inputbox.focus();
+        });
+        
+document.getElementById("colourButton").addEventListener("click", function() {
+            var inputbox = document.getElementById("inputbox");
+            inputbox.value = "<span class='color: #fgf'>" + inputbox.value + "</span>";
+            inputbox.focus();
+        });
+        
+        document.getElementById("inputbox").addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
