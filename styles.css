@@ -1,7 +1,15 @@
+
+    @font-face {
+    font-family: 'Atop Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/Atop-R99O3.woff") format('woff');
+    }
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Atop Regular';
     height: 100%;
     overflow: hidden;
 }
@@ -27,22 +35,19 @@ body, html {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
     color: white;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
-.logo {
+.green-text {
     font-size: 24px;
     font-weight: bold;
     color: #00ff00;
 }
 
 .tagline {
-    font-size: 12px;
+    position: absolute;
+    top: 80px;
+    font-size: 15px;
     letter-spacing: 2px;
-    margin-top: 10px;
 }
 
 .headline-container {
@@ -60,6 +65,14 @@ body, html {
 .cutout-text, .bold-text {
     font-size: 48px;
     font-weight: bold;
+    font-family: 'Atop Regular';
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+}
+
+.cutout-text {
+    margin-right: 10px;
 }
 
 .subheading {
@@ -68,13 +81,17 @@ body, html {
 }
 
 .learn-more {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #00ff00;
+    position: absolute;
+    top: 590px;
+    padding: 30px 30px;
+    background: #4a4e4a;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-family: 'Atop Regular';
+    font-size: 16px;
+    color: white;
 }
 
 .learn-more:hover {
@@ -101,6 +118,7 @@ body, html {
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.3s ease;
+    font-family: 'Atop Regular';
 }
 
 .navbar a:hover {
