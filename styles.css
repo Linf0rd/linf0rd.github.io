@@ -1,1 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
 
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 1;
+    position: relative;
+    background: url('path/to/your/forest-image.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff00;
+}
+
+.tagline {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.headline {
+    margin-top: 20px;
+}
+
+.cutout-text {
+    font-size: 48px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+.bold-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.subheading {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.learn-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00ff00;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+    background: #00cc00;
+}
+
+.right-side {
+    flex: 1;
+    position: relative;
+    background: url('path/to/your/forest-image.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00ff00;
+}
+
+.slider-navigation {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diamond {
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: rotate(45deg);
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.diamond:hover {
+    background: #00ff00;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-arrow, .right-arrow {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    color: #00ff00;
+}
