@@ -101,7 +101,7 @@ body, html {
 .right-side {
     flex: 1;
     position: relative;
-    background: url('images/greenery.jpg') no-repeat center center/cover;
+    background: url('images/clouds.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
