@@ -1,3 +1,3 @@
 *Work in progress*
 
-Baby steps my brudda
+Baby steps my brudda.
