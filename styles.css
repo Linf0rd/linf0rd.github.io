@@ -27,11 +27,14 @@ body, html {
     }
 }
 
+body {
+    background: url('/images/forest2.jpg') no-repeat center center/auto;
+}
+
 .left-side {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url('/images/forest2.jpg') no-repeat center center/auto;
 }
 
 .overlay {
@@ -88,9 +91,18 @@ body, html {
 /* Top Navigation */
 .top-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-right {
@@ -109,6 +121,11 @@ body, html {
 
 .nav-link:hover {
     color: #15bed4;
+}
+
+.nav-link.active {
+    color: #15bed4;
+    font-weight: bold;
 }
 
 /* Image Grid */
@@ -148,7 +165,30 @@ body, html {
     }
 
     .top-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
         display: none;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-right.show {
+        display: flex;
+        flex-direction: column;
     }
 
     .image-grid {
